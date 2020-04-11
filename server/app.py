@@ -1,6 +1,9 @@
+import os
+import uuid
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-import uuid
+
 
 
 # configuration
@@ -35,8 +38,9 @@ def all_books():
         BOOKS.append({
             'id': uuid.uuid4().hex,
             'title': post_data.get('title'),
-            'author': post_data.get('author'),
-            'read': post_data.get('read')
+            'publisher': post_data.get('publisher'),
+            'instock': post_data.get('instock'),
+						'price': post_data.get('price')
         })
         response_object['message'] = 'Book added!'
     else:
@@ -56,8 +60,9 @@ def single_book(book_id):
         BOOKS.append({
             'id': uuid.uuid4().hex,
             'title': post_data.get('title'),
-            'author': post_data.get('author'),
-            'read': post_data.get('read')
+            'publisher': post_data.get('publisher'),
+            'instock': post_data.get('instock'),
+						'price': post_data.get('price')
         })
         response_object['message'] = 'Book updated!'
     if request.method == 'DELETE':
@@ -68,21 +73,24 @@ def single_book(book_id):
 BOOKS = [
     {   
         'id': uuid.uuid4().hex,
-        'title': 'On the Road',
-        'author': 'Jack Kerouac',
-        'read': True
+        'title': 'Seasons',
+        'publisher': 'Azmodee',
+        'instock': True,
+        'price': '5.99'
     },
     {
         'id': uuid.uuid4().hex,
-        'title': 'Harry Potter and the Philosopher\'s Stone',
-        'author': 'J. K. Rowling',
-        'read': False
+        'title': 'Dungeons \'n\' Dragons',
+        'publisher': 'Wizards of the Coast?',
+        'instock': False,
+        'price': '5.99'
     },
     {
         'id': uuid.uuid4().hex,
-        'title': 'Green Eggs and Ham',
-        'author': 'Dr. Seuss',
-        'read': True
+        'title': 'Monoply',
+        'publisher': 'John Carpenter',
+        'instock': True,
+        'price': '5.99'
     }
 ]
 
