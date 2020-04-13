@@ -53,11 +53,25 @@
   text-align: left;
 }
 
-.table-wrap .button {
-  margin: 10px 5px;
+/* -----------------Product table buttons------------------------- */
+.button-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+.table-wrap .button,
+.table-wrap .button .rent {
+	display: block;
+	flex-grow: 1;
+  margin: 5px 5px;
   padding: 10px 20px;
 
-  width: fit-content;
+	width: 15ch;
+  /* width: fit-content; */
+
+	font-size: 14px;
 
   border: none;
   border-radius: 10px;
@@ -68,6 +82,24 @@
 .add {
   background-color: rgb(16, 150, 139);
 }
+
+.update {
+  background-color: rgb(155, 109, 207);
+}
+
+.delete {
+  background-color: crimson;
+}
+/* Since Rent is actually a router-link that generates an achor tag from an endpoint and product ID, it will require some*/
+ /*separate, special styling, though it is under the button section, because functionally, it will have the same purpose  */
+.rent {
+	box-sizing: border-box;
+	/* display: block; */
+	text-decoration: none;
+	color: black;
+	background-color: deeppink;
+}
+/* -------------------------------------------------------------------------------------- */
 
 .table {
   display: flex;
@@ -96,14 +128,6 @@ thead > tr > th,
 tbody > tr > td {
  flex: 1;
  /* margin: auto; */
-}
-
-.update {
-  background-color: rgb(155, 109, 207);
-}
-
-.delete {
-  background-color: crimson;
 }
 
 /* ----------modal Styling ---------------- */
