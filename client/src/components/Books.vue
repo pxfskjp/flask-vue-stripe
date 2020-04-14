@@ -27,6 +27,7 @@
             <div class="button-group">
               <button type="button" class="button update" v-b-modal.book-update-modal @click="editBook(book)">Update</button>
               <button type="button" class="button delete" @click="onDeleteBook(book)">Delete</button>
+							<router-link :to="`/order/${book.id}`" class="button rent">Rent</router-link>
             </div>
           </td>
         </tr>

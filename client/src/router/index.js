@@ -27,16 +27,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Books from '../components/Books.vue';
-<<<<<<< Updated upstream
+
 import Ping from '../components/Ping.vue';
-=======
 import Order from '../components/Order.vue';
 import OrderComplete from '../components/OrderComplete.vue';
 import Home from '../components/Home.vue';
 import About from '../components/About.vue';
 import FAQ from '../components/FAQ.vue';
 import Events from '../components/Events.vue';
->>>>>>> Stashed changes
 
 Vue.use(Router);
 
@@ -50,11 +48,10 @@ export default new Router({
 			component: Books,
 		},
 		{
-<<<<<<< Updated upstream
 			path: '/ping',
 			name: 'Ping',
 			component: Ping,
-=======
+    },
 			path: '/order/:id',
 			name: 'Order',
 			component: Order,
@@ -83,7 +80,6 @@ export default new Router({
 			path: '/events',
 			name: 'Events',
 			component: Events,
->>>>>>> Stashed changes
 		},
 	],
 });

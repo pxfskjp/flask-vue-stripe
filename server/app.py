@@ -1,5 +1,6 @@
 import os
 import uuid
+import stripe
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -51,9 +52,15 @@ def all_books():
     #     'books': BOOKS
     # })
 
-@app.route('/books/<book_id>', methods=['PUT', 'DELETE'])
+@app.route('/books/<book_id>', methods=['GET', 'PUT', 'DELETE'])
 def single_book(book_id):
     response_object = {'status': 'success'}
+    if request.method == 'GET':
+        return_book = ''
+        for book in BOOKS:
+            if book['id'] == book_id:
+                return_book = book
+        response_object['book'] = return_book
     if request.method == 'PUT':
         post_data = request.get_json()
         remove_book(book_id)
@@ -69,6 +76,32 @@ def single_book(book_id):
         remove_book(book_id)
         response_object['message'] = 'Book removed!'
     return jsonify(response_object)
+
+@app.route('/charge', methods=['POST'])
+def create_charge():
+	post_data = request.get_json()
+	amount = round(float(post_data.get('book')['price']) * 100)
+	stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
+	charge = stripe.Charge.create(
+		amount=amount,
+		currency='cad',
+		card=post_data.get('token'),
+		description=post_data.get('book')['title']
+	)
+	response_object = {
+		'status': 'success',
+		'charge': charge
+	}
+	return jsonify(response_object), 200
+
+@app.route('/charge/<charge_id>')
+def get_charge(charge_id):
+	stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
+	response_object = {
+		'status': 'success',
+		'charge': stripe.Charge.retrieve(charge_id)
+	}
+	return jsonify(response_object), 200
 
 BOOKS = [
     {   
