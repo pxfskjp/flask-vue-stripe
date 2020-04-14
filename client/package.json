@@ -12,7 +12,8 @@
     "bootstrap-vue": "^2.0.0-rc.19",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
-    "vue-router": "^3.1.6"
+    "vue-router": "^3.1.6",
+    "vuetify": "^2.2.21"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
@@ -40,9 +41,17 @@
     },
     "rules": {
       "no-mixed-spaces-and-tabs": 0,
-      "indent": [2, "tab"],
+      "indent": [
+        2,
+        "tab"
+      ],
       "no-tabs": 0,
-      "max-len": ["error", { "code": 160 }]
+      "max-len": [
+        "error",
+        {
+          "code": 160
+        }
+      ]
     }
   },
   "browserslist": [

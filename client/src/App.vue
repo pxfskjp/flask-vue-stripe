@@ -1,58 +1,16 @@
 <template>
   <div id="app">
+	<Navigation></Navigation>
     <router-view/>
+	<Footer></Footer>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Navigation from './components/Navigation.vue';
+import Footer from './components/Footer.vue';
 
-  margin: 0 auto;
-  margin-top: 60px;
-  padding: 10px 20px;
-
-  min-width: 60px;
-  width: fit-content;
-  border-radius: 15px;
-
-  background-color: rgb(226, 208, 202);
-  color: darkcyan;
-
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-/* --------------Books---------------- */
-.table-wrap {
-  display: flex;
-  flex-direction: column;
-
-  padding: 20px;
-
-  border: 2px solid darkslategrey
-}
-
-.table-wrap > h1 {
-  width: 75vw;
-  text-align: left;
-}
-
+<<<<<<< Updated upstream
 .table-wrap .button {
   margin: 10px 5px;
   padding: 10px 20px;
@@ -87,17 +45,32 @@ tbody {
   justify-content: center;
   align-items: center;
   flex: 1;
+=======
+export default {
+	name: 'app',
+	components: {
+		Navigation,
+		Footer,
+	},
+};
+</script>
 
-  padding: 10px 0;
-  border-top: 1px darkslategrey solid;
+
+<style>
+>>>>>>> Stashed changes
+
+#app {
+	margin: 0 auto;
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	text-align: center;
+	min-width: 60px;
 }
 
-thead > tr > th,
-tbody > tr > td {
- flex: 1;
- /* margin: auto; */
+h1 {
+	margin-top: 4rem;
 }
 
+<<<<<<< Updated upstream
 .update {
   background-color: rgb(155, 109, 207);
 }
@@ -279,4 +252,6 @@ tbody > tr > td {
 	}
 
 
+=======
+>>>>>>> Stashed changes
 </style>
