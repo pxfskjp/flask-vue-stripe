@@ -27,9 +27,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Books from '../components/Books.vue';
-import Order from '../components/Order.vue';
+
 import Ping from '../components/Ping.vue';
+import Order from '../components/Order.vue';
 import OrderComplete from '../components/OrderComplete.vue';
+import Home from '../components/Home.vue';
+import About from '../components/About.vue';
+import FAQ from '../components/FAQ.vue';
+import Events from '../components/Events.vue';
 
 Vue.use(Router);
 
@@ -38,11 +43,15 @@ export default new Router({
 	base: process.env.BASE_URL,
 	routes: [
 		{
-			path: '/',
+			path: '/books',
 			name: 'Books',
 			component: Books,
 		},
 		{
+			path: '/ping',
+			name: 'Ping',
+			component: Ping,
+    },
 			path: '/order/:id',
 			name: 'Order',
 			component: Order,
@@ -53,9 +62,24 @@ export default new Router({
 			component: OrderComplete,
 		},
 		{
-			path: '/ping',
-			name: 'Ping',
-			component: Ping,
+			path: '/',
+			name: 'Home',
+			component: Home,
+		},
+		{
+			path: '/FAQ',
+			name: 'FAQ',
+			component: FAQ,
+		},
+		{
+			path: '/about',
+			name: 'About',
+			component: About,
+		},
+		{
+			path: '/events',
+			name: 'Events',
+			component: Events,
 		},
 	],
 });
