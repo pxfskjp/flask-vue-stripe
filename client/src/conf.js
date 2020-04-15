@@ -1,1 +1,1 @@
-export const GAMESAPI = 'http://localhost:5000';
+// default export const GAMESAPI = 'http://localhost:5000';

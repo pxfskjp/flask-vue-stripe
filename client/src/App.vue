@@ -26,7 +26,7 @@ export default {
 		--spiritstone-red: rgba(239,85,44, 1);
 		--averland-sunset: rgba(247,189,52, 1);
 	}
-	
+
 	body {
 		background-color: darkslategray;
 	}
@@ -49,5 +49,5 @@ export default {
   h1 {
   margin-top: 4rem;
 	}
-	
+
 </style>
