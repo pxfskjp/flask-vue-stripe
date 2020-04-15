@@ -7,6 +7,8 @@
 <script>
 import axios from 'axios';
 
+const GAMESAPI = 'https://games-api-juues4q2ia-uc.a.run.app';
+
 export default {
 	name: 'Ping',
 	data() {
@@ -16,7 +18,7 @@ export default {
 	},
 	methods: {
 		getMessage() {
-			const path = 'http://localhost:5000/ping';
+			const path = `${GAMESAPI}/ping`;
 			axios
 				.get(path)
 				.then((res) => {

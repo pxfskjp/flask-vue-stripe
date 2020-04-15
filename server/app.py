@@ -1,11 +1,11 @@
 import os
 import uuid
 import stripe
+import firebase_admin
 
+from firebase_admin import credentials
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-
-
 
 # configuration
 DEBUG = True
@@ -129,4 +129,4 @@ BOOKS = [
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
