@@ -80,12 +80,12 @@ export default {
 			colors: [
 				'green',
 				'red',
-				'pink',
+				'blue',
 			],
 			slides: [
 				'Upcoming Tournaments',
 				'Rent or Buy Games',
-				'Information on Covid',
+				'Information on Covid-19',
 			],
 		};
 	},

@@ -13,20 +13,36 @@
 <style scoped>
 .footer {
 	height: 5.5rem;
-	position: fixed;
-  	left: 0;
-  	bottom: 0;
-  	width: 100%;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
   	background-color: black;
   	color: yellow;
   	text-align: center;
 }
 .smicons {
-	font-size: 2rem;
+	font-size: 1.6rem;
 	display: flex;
 	justify-content: space-around;
 	padding-top: 0.5rem;
+	margin-bottom: .6em;
+}
+
+.fab:hover {
+	cursor: pointer;
+	color: rgb(146, 146, 13);
 }
 
 
+@media screen and (max-width: 800px) {
+	.smicons {
+		font-size: 1.2rem;
+	}
+	.fab:hover {
+		cursor: text;
+	}
+	p {
+		font-size: .8rem;
+	}
+}
 </style>
