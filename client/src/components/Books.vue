@@ -292,7 +292,7 @@ export default {
   min-width: 60px;
   width: fit-content;
 	background: rgb(239,85,44);
-	background: linear-gradient(180deg, rgba(239,85,44,1) 0%, rgba(247,189,52,1) 100%);
+	background: linear-gradient(180deg, var(--spiritstone-red) 0%, rgba(247,189,52,1) 100%);
 	background-clip: padding-box;
 	border-radius: 15px;
 	border: 1px outset #ec5920;

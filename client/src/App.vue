@@ -21,6 +21,12 @@ export default {
 </script>
 
 <style>
+	:root {
+		--lahmian-medium: rgba(238, 238, 226, 1);
+		--spiritstone-red: rgba(239,85,44, 1);
+		--averland-sunset: rgba(247,189,52, 1);
+	}
+	
 	body {
 		background-color: darkslategray;
 	}
