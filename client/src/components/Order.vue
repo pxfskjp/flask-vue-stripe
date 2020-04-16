@@ -168,7 +168,7 @@ export default {
 	flex-direction: column;
 
 	margin: 0 auto;
-	margin-top: 60px;
+	margin-top: 10vh;
 	padding: 10px 20px;
 
 	/* min-width: 60px; */
