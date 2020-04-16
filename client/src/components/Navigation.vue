@@ -13,9 +13,9 @@
 
 
 <script>
+
 export default {
 	name: 'Navigation',
-
 	data() {
   		return {
     		links: [
@@ -51,37 +51,42 @@ export default {
 </script>
 
 <style scoped>
-.navbar {
-	height: 4rem;
-	width: 100%;
-	position: fixed;
-  	left: 0;
-	top: 0;
-  	width: 100%;
-	background-color: black;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-::placeholder {
-	padding-left: 1rem;
-}
-.sblogo {
-    width: 15rem;
-    height: 5rem;
-    overflow: hidden;
-}
-.navlinks {
-	color: yellow;
-	text-decoration: none;
-	justify-content: space-between;
+	.navbar {
+		height: 4rem;
+		width: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-color: black;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		/* display: none; */
+	}
 
-}
-.search {
-	height: 1.5rem;
-	width: 9rem;
-	border-radius: 20px;
-	margin-right: 1rem;
-	background-color: white;
-}
+	::placeholder {
+		padding-left: 1rem;
+	}
+
+	.sblogo {
+		width: 15rem;
+		height: 5rem;
+		overflow: hidden;
+	}
+
+	.navlinks {
+		color: yellow;
+		text-decoration: none;
+		justify-content: space-between;
+	}
+
+	.search {
+		height: 1.5rem;
+		width: 9rem;
+		border-radius: 20px;
+		margin-right: 1rem;
+		background-color: white;
+	}
+
 </style>

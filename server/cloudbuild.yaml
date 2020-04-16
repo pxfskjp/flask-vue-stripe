@@ -1,0 +1,7 @@
+steps:
+  # build & push the container image
+- name: "gcr.io/kaniko-project/executor:latest"
+  args: ["--cache=true", "--cache-ttl=48h", "--destination=gcr.io/boner-boiz/games-api:latest"]
+  # Deploy container image to Cloud Run
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ['beta', 'run', 'deploy', 'todo', '--image', 'gcr.io/boner-boiz/games-api:latest', '--region', 'us-central1', '--allow-unauthenticated', '--platform', 'managed']

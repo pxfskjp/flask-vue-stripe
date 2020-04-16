@@ -22,7 +22,9 @@
 
 
 <script>
+
 /* eslint-disable */
+
 export default {
 	name: 'About',
 	data: () => ({
@@ -35,6 +37,7 @@ export default {
 		],
 	}),
 };
+
 </script>
 
 <style scoped>
