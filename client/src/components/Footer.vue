@@ -19,7 +19,7 @@
   	width: 100%;
   	background-color: black;
   	color: yellow;
-  	text-align: center;
+	text-align: center;
 }
 .smicons {
 	font-size: 2rem;

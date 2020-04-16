@@ -11,23 +11,24 @@ import Navigation from './components/Navigation.vue';
 import Footer from './components/Footer.vue';
 
 export default {
-  name: 'app',
-  components: {
-    Navigation,
-    Footer,
-},
+	name: 'app',
+	components: {
+		Navigation,
+		Footer,
+	},
 };
 
 </script>
 
 <style>
+  body {
+	  font-family: 'Heebo', sans-serif;
+  }
   #app {
    margin: 0 auto;
-   font-family: ;
    text-align: center;
    min-width: 60px;
   }
-  
   h1 {
   margin-top: 4rem;
   }

@@ -62,7 +62,6 @@ export default {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
 }
 ::placeholder {
 	padding-left: 1rem;
@@ -76,6 +75,7 @@ export default {
 	color: yellow;
 	text-decoration: none;
 	justify-content: space-between;
+
 }
 .search {
 	height: 1.5rem;
