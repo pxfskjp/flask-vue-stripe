@@ -4,7 +4,7 @@
 		<p class="subheading">We have events going on all the time! If you don't see one that suits you, contact us to book your own.</p>
 	<v-row>
     <v-col
-			class="wrapper">
+		class="wrapper">
       <v-sheet height="400" class="calendar">
         <v-calendar
           ref="calendar"
@@ -15,13 +15,14 @@
         ></v-calendar>
       </v-sheet>
     </v-col>
-  </v-row>
+  	</v-row>
 	</div>
 </template>
 
 
 <script>
 
+// Gets the current date to focus the calendar
 const today = new Date();
 const dd = String(today.getDate()).padStart(2, '0');
 const mm = String(today.getMonth() + 1).padStart(2, '0');

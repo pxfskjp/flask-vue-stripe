@@ -18,6 +18,16 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 
+# sanity check route for server connectivity
+
+@app.route('/ping', methods=['GET'])
+def ping_pong():
+    return jsonify('pong!')
+
+
+
+# Remove book from data
+
 def remove_book(book_id):
     for book in BOOKS:
         if book['id'] == book_id:
@@ -26,10 +36,7 @@ def remove_book(book_id):
     return False
 
 
-# sanity check route
-@app.route('/ping', methods=['GET'])
-def ping_pong():
-    return jsonify('pong!')
+# Fetch data 
 
 @app.route('/books', methods=['GET', 'POST'])
 def all_books():
@@ -47,10 +54,8 @@ def all_books():
     else:
         response_object['books'] = BOOKS
     return jsonify(response_object)
-    # return jsonify({
-    #     'status': 'success',
-    #     'books': BOOKS
-    # })
+
+
 
 @app.route('/books/<book_id>', methods=['GET', 'PUT', 'DELETE'])
 def single_book(book_id):
@@ -77,6 +82,8 @@ def single_book(book_id):
         response_object['message'] = 'Book removed!'
     return jsonify(response_object)
 
+
+
 @app.route('/charge', methods=['POST'])
 def create_charge():
 	post_data = request.get_json()
@@ -94,6 +101,8 @@ def create_charge():
 	}
 	return jsonify(response_object), 200
 
+
+
 @app.route('/charge/<charge_id>')
 def get_charge(charge_id):
 	stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
@@ -102,6 +111,9 @@ def get_charge(charge_id):
 		'charge': stripe.Charge.retrieve(charge_id)
 	}
 	return jsonify(response_object), 200
+
+
+# dummy data for demo purposes
 
 BOOKS = [
     {   
