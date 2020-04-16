@@ -45,7 +45,6 @@ export default {
    text-align: center;
    min-width: 60px;
   }
-
   h1 {
   margin-top: 4rem;
 	}
