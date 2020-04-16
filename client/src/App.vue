@@ -16,7 +16,13 @@ export default {
 		Navigation,
 		Footer,
 	},
+	  watch: {
+		$route(to) {
+			document.title = to.meta.title || 'The Sentry Box';
+		},
+	},
 };
+
 
 </script>
 

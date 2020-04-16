@@ -20,11 +20,17 @@ export default new Router({
 			path: '/books',
 			name: 'Books',
 			component: Books,
+			meta: {
+				title: 'Buy/Rent',
+			},
 		},
 		{
 			path: '/order/:id',
 			name: 'Order',
 			component: Order,
+			meta: {
+				title: 'Order',
+			},
 		},
 		{
 			path: '/complete/:id',
@@ -35,21 +41,33 @@ export default new Router({
 			path: '/',
 			name: 'Home',
 			component: Home,
+			meta: {
+				title: 'The Sentry Box - Home',
+			},
 		},
 		{
 			path: '/FAQ',
 			name: 'FAQ',
 			component: FAQ,
+			meta: {
+				title: 'Frequently Asked Questions',
+			},
 		},
 		{
 			path: '/about',
 			name: 'About',
 			component: About,
+			meta: {
+				title: 'About Us',
+			},
 		},
 		{
 			path: '/events',
 			name: 'Events',
 			component: Events,
+			meta: {
+				title: 'Events',
+			},
 		},
 	],
 });
