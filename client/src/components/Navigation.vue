@@ -51,7 +51,6 @@ export default {
 </script>
 
 <style scoped>
-
 	.navbar {
 		height: 4rem;
 		width: 100%;
