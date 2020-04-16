@@ -1,13 +1,13 @@
 <template>
 	<div>
   		<h2></h2>
- 		<nav class="navbar">
-			<img src="../assets/sboxlogo.png" class="sblogo" alt="sentry box logo">
-    		<router-link class="navlinks" v-for="routes in links"
-						v-bind:key="routes.id"
-						:to="`${routes.page}`">{{routes.text}}</router-link>
-			<input type="text" class="search" placeholder="Search...">
-  		</nav>
+ 				<nav class="navbar">
+					<img src="../assets/sboxlogo.png" class="sblogo" alt="sentry box logo">
+    			<router-link class="navlinks" v-for="routes in links"
+							v-bind:key="routes.id"
+							:to="`${routes.page}`">{{routes.text}}</router-link>
+					<input type="text" class="search" placeholder="Search...">
+  			</nav>
 	</div>
 </template>
 

@@ -2,6 +2,9 @@
 	<div class="content">
 		<v-app>
       <v-content>
+
+				<!-- Hero Header -->
+
 				<v-carousel
 					cycle
 					height="400"
@@ -30,114 +33,126 @@
 				</v-carousel>
 
 <!-- ITEM CARDS -->
-<v-container d-flex>
-<v-card
-    class="mx-auto"
-    max-width="300"
-  >
-    <v-img
-      class="white--text align-end"
-      height="200px"
-      src='https://cdn.shoplightspeed.com/shops/622104/files/18799131/768x768x2/wizards-of-the-coast-pre-order-magic-the-gathering.jpg'
-			contain
-    ></v-img>
 
-    <v-card-subtitle class="pb-0">Magic: The Gathering</v-card-subtitle>
-
-    <v-card-text class="text--primary">
-      <div>The collectable card game</div>
-    </v-card-text>
-
-    <v-card-actions>
-      <v-btn
-        color="orange"
-        text
-      >
-        Buy
-      </v-btn>
+			<v-container d-flex>
 
 
-      <v-btn
-        color="orange"
-        text
-      >
-        Rent
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-	<v-card
-    class="mx-auto"
-    max-width="300"
-  >
-    <v-img
-      class="white--text align-end"
-      height="200px"
-      src='https://images-na.ssl-images-amazon.com/images/I/91Q9Uzy--fL._AC_SL1500_.jpg'
-			contain
-    ></v-img>
+					<!-- First Card -->
 
-    <v-card-subtitle class="pb-0">Seasons</v-card-subtitle>
 
-    <v-card-text class="text--primary">
-      <div>The tactical card game</div>
-    </v-card-text>
+					<v-card
+    				class="mx-auto"
+    				max-width="300"
+ 					>
+    			<v-img
+      			class="white--text align-end"
+      			height="200px"
+      			src='https://cdn.shoplightspeed.com/shops/622104/files/18799131/768x768x2/wizards-of-the-coast-pre-order-magic-the-gathering.jpg'
+						contain
+    			></v-img>
 
-    <v-card-actions>
-      <v-btn
-        color="orange"
-        text
-      >
-        Buy
-      </v-btn>
+    			<v-card-subtitle class="pb-0">Magic: The Gathering</v-card-subtitle>
 
-      <v-btn
-        color="orange"
-        text
-      >
-        Rent
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-	<v-card
-    class="mx-auto"
-    max-width="300"
-  >
-    <v-img
-      class="white--text align-end"
-      height="200px"
-      src='https://images-na.ssl-images-amazon.com/images/I/81crhhZd63L._AC_SL1500_.jpg'
-			contain
-    ></v-img>
+    			<v-card-text class="text--primary">
+      		<div>The collectable card game</div>
+   	 			</v-card-text>
 
-    <v-card-subtitle class="pb-0">Gloomhaven</v-card-subtitle>
+    			<v-card-actions>
+      		<v-btn
+        		color="orange"
+        		text
+      		>
+        		Buy
+      		</v-btn>
 
-    <v-card-text class="text--primary">
-      <div>A table-top campaign for 1-4 players</div>
-    </v-card-text>
+      		<v-btn
+        		color="orange"
+        		text
+      		>
+        		Rent
+      		</v-btn>
+   				</v-card-actions>
+  				</v-card>
 
-    <v-card-actions>
-      <v-btn
-        color="orange"
-        text
-      >
-        Buy
-      </v-btn>
+					<!-- Second card -->
 
-      <v-btn
-        color="orange"
-        text
-      >
-        Rent
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-</v-container>
-</v-content>
-</v-app>
-</div>
+					<v-card
+    				class="mx-auto"
+    				max-width="300"
+  				>
+    			<v-img
+      			class="white--text align-end"
+      			height="200px"
+      			src='https://images-na.ssl-images-amazon.com/images/I/91Q9Uzy--fL._AC_SL1500_.jpg'
+						contain
+    			></v-img>
+
+    			<v-card-subtitle class="pb-0">Seasons</v-card-subtitle>
+
+    			<v-card-text class="text--primary">
+      		<div>The tactical card game</div>
+    			</v-card-text>
+
+    			<v-card-actions>
+      		<v-btn
+        		color="orange"
+       	 		text
+      		>
+        		Buy
+     	 		</v-btn>
+
+      		<v-btn
+        		color="orange"
+        		text
+      		>
+        		Rent
+      		</v-btn>
+    			</v-card-actions>
+  				</v-card>
+
+					<!-- Third Card -->
+
+					<v-card
+    				class="mx-auto"
+    				max-width="300"
+  				>
+    			<v-img
+      			class="white--text align-end"
+      			height="200px"
+      			src='https://images-na.ssl-images-amazon.com/images/I/81crhhZd63L._AC_SL1500_.jpg'
+						contain
+   				></v-img>
+
+    			<v-card-subtitle class="pb-0">Gloomhaven</v-card-subtitle>
+
+    			<v-card-text class="text--primary">
+     				<div>A table-top campaign for 1-4 players</div>
+    			</v-card-text>
+
+    			<v-card-actions>
+      			<v-btn
+        			color="orange"
+        			text
+      			>
+        			Buy
+      			</v-btn>
+
+      			<v-btn
+        			color="orange"
+        			text
+      			>
+        			Rent
+      			</v-btn>
+    			</v-card-actions>
+  			</v-card>
+			</v-container>
+			</v-content>
+		</v-app>
+	</div>
 </template>
 
 <script>
+
 export default {
 	name: 'Home',
 	data() {
@@ -171,4 +186,5 @@ export default {
 .pb-0 {
 	font-size: 2rem;
 }
+
 </style>
